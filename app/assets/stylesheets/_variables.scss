@@ -1,0 +1,85 @@
+@import 'variables-colors';
+
+$line-height-base:  1.2 !default;
+
+$table-head-bg: $body-bg;
+$table-head-color: $body-color;
+$table-border-color: $border-color;
+$table-accent-bg: $body-bg;
+
+$card-border-radius: 0px;
+$card-cap-bg: transparent;
+$card-border-color: $border-color;
+
+$navbar-light-color: $body-color;
+$navbar-light-active-color: $blue;
+
+$dropdown-border-radius: 0;
+$dropdown-link-hover-color: theme-color('link-color');
+
+
+$dropdown-link-active-color:        theme-color('link-color');
+$dropdown-link-active-bg:           transparent;
+
+// Inputs
+$input-group-addon-bg: transparent;
+$input-border-focus: #C3D2E1;
+$input-border-color: #DBE5EE;
+$input-box-shadow-focus: 0 2px 4px 0 #E6E9ED;
+
+$input-btn-padding-y: 0.5rem;
+$input-btn-padding-x: 0.8rem;
+
+// Buttons
+$btn-font-weight:  500 !default;
+$btn-box-shadow: 0 2px 4px 0 rgba(219,225,230,0.5) !important;
+$btn-secondary-bg: $body-bg;
+$btn-secondary-border: $border-color;
+
+// Fonts
+$font-size-base: 0.875rem;
+$font-size-sm: 0.75rem;
+$font-size-h6: 0.875rem;
+$badge-font-size: 0.75rem;
+
+// Spacing
+$spacer: 1.25rem;
+
+$navbar-padding-y: 0;
+$navbar-padding-x: 1rem;
+$navbar-dark-color: #ffffff;
+
+$badge-padding-x: .45rem;
+$badge-padding-y: .15rem;
+
+
+$dropdown-item-padding-y: 0.5rem;
+$dropdown-item-padding-x: 1rem;
+
+$list-group-item-padding-y:      0.5rem;
+$list-group-item-padding-x:      1rem;
+
+
+// Fonts
+
+$font-family-base: 'Helvetica Neue', 'Helvetica', Arial;
+$small-font-size: .725rem;
+
+$progress-height: 8px;
+
+$mdc-theme-primary: theme-color('primary');
+$navbar-height: 62px;
+$navbar-mini-height: 52px;
+$navbar-header-height: 82px;
+
+// $material-design-icons-font-path: '../fonts/material-icons/' !default;
+$material-design-icons-font-path: 'material-design-icons-iconfont/dist/fonts/' !default;
+
+// NAV
+$nav-tabs-link-active-bg: #fff;
+
+
+$grid-gutter-width : 2rem !default;
+$spacer-xs: 1.25rem !default;
+$spacer: $grid-gutter-width !default;
+$spacer-lg : $spacer * 1.2 !default;

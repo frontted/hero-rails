@@ -1,0 +1,13 @@
+{
+  "name": "hero-rails",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.0.0",
+    "popper.js": "1.12.9",
+    "jquery": "3.2.1",
+    "dom-factory": "1.0.0-alpha.10",
+    "material-design-kit": "1.0.0-alpha.20",
+    "material-design-icons-iconfont": "3.0.3"
+  }
+}

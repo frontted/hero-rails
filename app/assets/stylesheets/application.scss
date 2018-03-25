@@ -1,0 +1,20 @@
+// COLOR PROCESSING FUNCTIONS
+@import "bootstrap/scss/functions";
+@import "bootstrap-color-yiq";
+
+// APP THEME VARIABLES
+@import "variables";
+
+// BOOTSTRAP
+@import "bootstrap/scss/bootstrap";
+
+
+// MDK LAYOUT
+@import 'material-design-kit/src/style';
+
+// MATERIAL FONT ICONS
+@import 'material-icons';
+
+@import 'layout';
+@import 'drawer';
+@import "navbar";

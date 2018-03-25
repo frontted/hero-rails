@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hero Rails - Rail 5 and Bootstrap 4 Admin Boilerplate </title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+
+    <div class="mdk-drawer-layout js-mdk-drawer-layout" data-fullbleed data-push data-responsive-width="992px" data-has-scrolling-region>
+
+      <div class="mdk-drawer-layout__content">
+        <!-- header-layout -->
+        <div class="mdk-header-layout js-mdk-header-layout  mdk-header--fixed  mdk-header-layout__content--scrollable">
+          <!-- header -->
+          <div class="mdk-header js-mdk-header bg-primary" data-fixed>
+              <div class="mdk-header__content">
+                <%= render 'layouts/navbar' %>
+              </div>
+          </div>
+
+          <!-- content -->
+          <div class="mdk-header-layout__content top-navbar mdk-header-layout__content--scrollable h-100">
+              <!-- main content -->
+              <%= yield %>
+          </div>
+        </div>
+
+      </div>
+      <!-- // END drawer-layout__content -->
+
+      <!-- drawer -->
+      <div class="mdk-drawer js-mdk-drawer" id="default-drawer">
+        <div class="mdk-drawer__content">
+          <div class="mdk-drawer__inner" data-simplebar data-simplebar-force-enabled="true">
+            <%= render 'layouts/sidebar' %>
+          </div>
+        </div>
+      </div>
+      <!-- // END drawer -->
+    </div>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </body>
+</html>

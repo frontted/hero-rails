@@ -1,0 +1,240 @@
+.top-navbar {
+  padding-top: $navbar-height;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-only($breakpoint) {
+    .ls-top-navbar-#{$breakpoint} {
+      top: $navbar-height !important;
+    }
+  }
+  @include media-breakpoint-up($breakpoint) {
+    .ls-top-navbar-#{$breakpoint}-up {
+      top: $navbar-height !important;
+    }
+  }
+}
+
+.navbar {
+  color: #fff;
+  height: $navbar-height;
+  // margin-bottom: $spacer;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  display: flex;
+  align-items: center;
+  // box-shadow: $navbar-box-shadow;
+  z-index: 1;
+  >*:first-child {
+    // margin-left: $spacer;
+    &.container,
+    &.container-fluid {
+      margin-left: auto;
+    }
+  }
+  .container,
+  .container-fluid {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    >*:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.navbar h1 {
+  font-size: 24px;
+}
+
+// White links against a dark background
+.navbar-dark {
+  .page-title {
+    font-size: 18px;
+    color:  #fff;
+    font-weight: bold;
+  }
+  .navbar-nav {
+    .nav-link {
+      font-weight: bold;
+      img {
+        border:1px solid #ffffff;
+      }
+    }
+  }
+  .nav-language {
+    > a {
+      color: rgba(255,255,255, .54) !important;
+      border: 1px solid rgba(255,255,255, .24);
+    }
+    &.show > a {
+      color: #ffffff !important;
+    }
+  }
+  .form-control {
+    border: 1px solid rgba(255,255,255, .24);
+    color: #ffffff;
+     // Placeholder
+    &::placeholder {
+      color: rgba(255,255,255, .54);
+    }
+    &:focus, &:active {
+      border-color: #ffffff;
+    }
+  }
+  .form-group  .input-group-addon i.material-icons {
+    color: #ffffff;
+  }
+}
+
+.dropdown-toggle.dropdown-clear-caret {
+  padding-right: 0 !important;
+  &::after {
+    border: 0 !important;
+  }
+}
+
+.navbar {
+  .dropdown.d-flex {
+    height: $navbar-height;
+  }
+  .dropdown-menu {
+  position: relative;
+  top:0;
+  margin-top: $navbar-height;
+  }
+}
+
+
+.navbar-nav > .nav-item {
+  margin-left: $spacer;
+}
+
+.notifications--active {
+  i.material-icons.align-middle::after {
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    content: '';
+    width:  5px;
+    height: 5px;
+    background: theme-color('danger');
+    border-radius: 50%;
+    display:block;
+  }
+}
+
+.nav-item {
+  &.notifications {
+    height: $navbar-height;
+    .dropdown-menu {
+      padding: 0; border-top: 0;
+    }
+    #notifications-ul {
+      background: theme-color('primary-dark');
+      border-radius: 0;
+      .nav-link {
+        &:first-of-type { padding-left: 0.5rem }
+        color: rgba(255,255,255, 0.54);
+        &.active {
+        color:#fff;
+        }
+      }
+    }
+     .dropdown-toggle::after {
+       content: none;
+     }
+     a:focus {
+       outline: none;
+     }
+     .tab-content {
+       width: 280px;
+       padding: 0;
+       ul.list-group-flush {
+         li.list-group-item {
+           &:not(:last-of-type) {
+             background: rgba($body-bg, .5);
+             border-color: $border-color;
+           }
+           &:hover {
+             color: $body-color !important;
+           }
+         }
+       }
+     }
+  }
+}
+.nav-item.nav-divider {
+  position: relative;
+  width:2px;
+  height:30px;
+  align-self: center;
+
+  &:before {
+    position: absolute;
+    content: '';
+    left:0;
+    height: 100%;
+    width:1px;
+    background: rgba(255,255,255, .18);
+  }
+  &:after {
+    position: absolute;
+    content: '';
+    right: 0;
+    height: 100%;
+    width: 1px;
+    background: rgba(0, 0, 0, .24);
+  }
+}
+
+.dropdown-toggle.dropdown-clear-caret {
+  padding-right: 0 !important;
+  text-decoration: none;
+  &::after {
+    border: 0 !important;
+  }
+}
+
+.nav-language {
+  height: $navbar-height;
+  > a {
+    padding: 6px;
+    border-radius: 5px;
+  }
+  &.show > a {
+    border-color: transparent;
+  }
+  .dropdown-menu {
+    padding: 0;
+    min-width: 4rem;
+    img { margin-right: 4px; }
+  }
+}
+
+.navbar .form-group {
+  .form-control {
+    background: transparent;
+    border-radius: 25px !important;
+    height: 34px;
+    min-width: 250px;
+     // Placeholder
+    &::placeholder {
+      // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+      opacity: 1;
+    }
+  }
+  .input-group-addon i.material-icons {
+    line-height: 34px;
+  }
+}
+
+.mdk-header {
+  height: $navbar-height !important;
+}
+
+
+
+.page-title {
+  font-size: 24px;
+}

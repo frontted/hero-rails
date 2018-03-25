@@ -1,0 +1,91 @@
+$drawer-dark-active-color: theme-color("primary");
+$drawer-dark-border: rgba(255,255,255,.2);
+$drawer-dark-bg: theme-color("drawer-dark-bg");
+
+.drawer--dark {
+  background: $drawer-dark-bg;
+  color: rgba(#BCE4FF, .54);
+  .text-muted { color: rgba(255,255,255, .54) !important; }
+
+  a { color: #fff; }
+  .dropdown a { color: $body-color; }
+  .dropdown a.active, .dropdown a.active:hover { color: #fff; }
+  .dropdown a:hover { color: theme-color('link-color') }
+
+  .dropdown {
+    .dropdown-menu .dropdown-item {
+      border-bottom: 1px solid $border-color;
+      &:last-of-type { border-bottom: 0; }
+    }
+    .dropdown-toggle {
+      width: 100%;
+      color: rgba(#BCE4FF, .54);
+      border-color: $drawer-dark-border;
+      &.btn { background: rgba(0,0,0,.2); }
+      &:hover, &:focus, &:active { text-decoration: none; }
+      &.btn {
+        &::after {
+          left: 90%;
+          top: 45%;
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  .drawer-heading { color: rgba(#BCE4FF, 0.20); }
+  .drawer-spacer {
+    .media .media-body > a { color:#fff; }
+    &.drawer-spacer-border { border-bottom: 1px solid $drawer-dark-border; }
+  }
+
+  .drawer-menu {
+    .drawer-menu-item {
+      [data-toggle=collapse] {
+        &.collapsed::after {
+          color: rgba(#BCE4FF, .54);
+        }
+      }
+      a {
+        color: #708CA4;
+        .material-icons {
+         color: #708CA4;
+
+        }
+        &:hover {
+          color: #fff;
+          text-decoration:none;
+          .material-icons { color: #fff; }
+        }
+      }
+      &.active a {
+        color: #ffffff;
+        .material-icons {
+          color: $drawer-dark-active-color;
+        }
+      }
+      > ul > .drawer-menu-item {
+        &:after, a:after,  { background: $drawer-dark-border; }
+        &.active a { color: #ffffff; }
+      }
+      &.drawer-submenu {
+        [aria-expanded=true] {
+          color: #fff;
+          .material-icons { color: theme-color('primary'); }
+        }
+      }
+    }
+  }
+
+  .drawer-activity {
+    .list-dot { background-color: rgba(255,255,255, .24); }
+    .list-group-item {
+      border-color: $drawer-dark-border;
+      &.active { color: rgba(#BCE4FF, .54); }
+      .media a { color:#fff; }
+    }
+    .list-group-item.active .list-dot {
+      background: theme-color('primary');
+    }
+  }
+}

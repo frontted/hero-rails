@@ -1,0 +1,49 @@
+//
+// Color system
+//
+
+$blue:    #549DE3 !default; // custom
+// $indigo:  #6610f2 !default;
+$purple:  #6774DF !default; // primary
+// $pink:    #e83e8c !default;
+$red:     #ff7076 !default; // custom
+// $orange:  #fd7e14 !default;
+$yellow:  #F5B666 !default; // custom
+$green:   #7DC668 !default; // custom
+// $teal:    #20c997 !default;
+$cyan:    #5dd2bc !default; // custom
+
+// define themes
+$themes: (
+  default: (
+    primary: #3783B5, // primary color
+    primary-dark: #25364A,
+    body-bg: #F9F9F9,
+    drawer-dark-bg: #25364A, // drawer dark background
+    border-color: #E2E8EE,
+    text-color: #25364A,
+    link-color: #44AAED,
+    muted-color: #6c757d,
+    fade: #F5F9FB
+  )
+) !default;
+
+$theme: default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  map-get($themes, $theme)
+), $theme-colors);
+
+
+// CUSTOM STUFF TO BE MOVED
+$body-bg: theme-color("body-bg");
+$border-color: theme-color("border-color");
+$hr-border-color: $border-color;
+$body-color: theme-color("text-color");
+$link-color:  theme-color("link-color");
+
+// SIDEBAR
+$border-color: #E2E8EE;
+
+$dropdown-link-active-color: #ffffff !default;
